@@ -7,3 +7,4 @@ __pycache__/
 *.zip
 *.json
 vaccinations.csv
+data/vaccinations.csv
