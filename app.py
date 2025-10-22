@@ -11,7 +11,7 @@ import plotly.express as px
 # Data loading (Drive-safe)
 # ---------------------------
 
-# Your Google Drive FILE ID (from the /d/<ID>/ URL)
+# Google Drive FILE ID (from the /d/<ID>/ URL)
 FILE_ID = "1hfH9rL7Eeee4SNaFKHFkZVy4L4Kji47-"
 
 # Direct download endpoints
@@ -19,9 +19,9 @@ PRIMARY_URL   = f"https://drive.usercontent.google.com/download?id={FILE_ID}&exp
 FALLBACK_URL1 = f"https://drive.google.com/uc?export=download&id={FILE_ID}"
 FALLBACK_URL2 = f"https://drive.google.com/uc?id={FILE_ID}"
 
-LOCAL_SAMPLE = "data/sample_vaccinations.csv"  # optional small sample you can include in the repo
+LOCAL_SAMPLE = "data/sample_vaccinations.csv"  
 
-HTML_PREFIX = b"<!DOCTYPE html"  # quick check to detect if we accidentally downloaded a web page
+HTML_PREFIX = b"<!DOCTYPE html"  # quick check to detect if it accidentally downloaded a web page
 
 def read_csv_from_url(url: str) -> pd.DataFrame:
     """Download bytes from a URL and read as CSV. Raises if HTML is returned."""
@@ -96,13 +96,9 @@ def normalize_to_expected_columns(df_raw: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-# Load data
+# Loads the data
 df_raw = load_drive_csv_or_sample()
 df = normalize_to_expected_columns(df_raw)
-
-# ---------------------------
-# Your original Dash app code
-# ---------------------------
 
 # Dash app (Created and creates Title of Tab)
 app = dash.Dash(__name__)
