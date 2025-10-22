@@ -1,28 +1,39 @@
-# 💉 COVID-19 Vaccination Rate Dashboard
+# COVID-19 Vaccination Rate Dashboard
 
-A simple interactive dashboard built in **Python**, **Dash**, and **Plotly** to visualize vaccination rates across U.S. counties.
-
----
-
-## Features
-
-- Loads local CSV data (`vaccinations.csv`)
-- Interactive dropdown to filter by state
-- Dynamic line chart showing vaccination trends by county
+An interactive dashboard built using Python, Dash, and Plotly to visualize vaccination rates across U.S. counties.
 
 ---
 
-## Run Locally
+## What It Does
 
-```bash
-git clone https://github.com/ColeSweeney/COVID-Vaccine-Dashboard.git
-cd COVID-Vaccine-Dashboard
-python3 -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-```
+- Loads vaccination data from a hosted CSV file
+- Displays vaccination trends over time by county
+- Allows users to filter by state through a dropdown menu
+- Uses Plotly for clean, interactive visualizations
+
+---
 
 ## 📸 Example
 
 ![Dashboard Screenshot](assets/Screenshot.png)
+
+---
+
+## How to Run Locally
+
+```bash
+# 1. Clone this repository
+git clone https://github.com/ColeSweeney/COVID-Vaccine-Dashboard.git
+cd COVID-Vaccine-Dashboard
+
+# 2. Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the app
+python app.py
+
+
